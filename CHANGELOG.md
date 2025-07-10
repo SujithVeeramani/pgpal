@@ -18,7 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - `pgpal dump` to export data as CSV or JSON with `--limit` and `--output`
 
 ---
-## [1.0.0] - 2025-07-10
+## [1.0.1] - 2025-07-10
 
 ### Added
 - Added README.md for the npm package 
