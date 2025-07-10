@@ -1,14 +1,19 @@
 {
   "name": "pgpal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple yet powerful PostgreSQL CLI assistant",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
-
   },
   "type": "module",
-  "keywords": ["postgres", "cli", "database", "pg", "tools"],
+  "keywords": [
+    "postgres",
+    "cli",
+    "database",
+    "pg",
+    "tools"
+  ],
   "author": "Sujith V L",
   "license": "MIT",
   "dependencies": {
