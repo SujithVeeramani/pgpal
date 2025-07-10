@@ -217,16 +217,4 @@ If you encounter any issues:
 3. Ensure you have proper database permissions
 4. Check the configuration file at `~/.pgpal.env`
 
-## 🔄 Changelog
-
-### v1.0.0
-- Initial release
-- Basic CRUD operations
-- Configuration management
-- Data export functionality
-- Schema inspection
-- Search capabilities
-
 ---
-
-Made with ❤️ for PostgreSQL developers
