@@ -11,7 +11,8 @@ function editConfig() {
     return;
   }
 
-  const editor = 'nano';
+  const isWindows = process.platform === 'win32';
+  const editor = process.env.EDITOR || (isWindows ? 'notepad' : 'nano');
 
   const child = spawn(editor, [CONFIG_PATH], {
     stdio: 'inherit',
