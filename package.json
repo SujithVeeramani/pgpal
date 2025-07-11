@@ -1,6 +1,6 @@
 {
   "name": "pgpal",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple yet powerful PostgreSQL CLI assistant",
   "main": "index.js",
   "scripts": {
