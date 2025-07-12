@@ -1,4 +1,5 @@
 import getClient from '../db/connect.js';
+import { logQuery } from '../utils/logQuery.js';
 
 async function runQuery(sql) {
   const client = getClient();
@@ -6,6 +7,7 @@ async function runQuery(sql) {
 
   try {
     const res = await client.query(sql);
+    logQuery(sql,"query");
     console.table(res.rows);
   } catch (err) {
     console.error(" Error executing query:", err.message);

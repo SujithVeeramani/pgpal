@@ -27,3 +27,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Fixed
 - default editor issue fixed for windows 
+
+## [1.1.0] - 2025-07-11
+
+### Added
+- `pgpal shell` – Interactive SQL REPL with support for multiline queries and graceful exit
+- `pgpal history` – View previously executed SQL queries with timestamps
+- `pgpal history --clear` – Clear the saved query history file
+- Automatic query logging from `pgpal query` and `pgpal shell`

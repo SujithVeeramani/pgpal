@@ -11,7 +11,7 @@ import dumpTable from './commands/dump.js';
 import searchKeyword from './commands/search.js';
 import showSchema from './commands/schema.js';
 import shellMode from './commands/shell.js';
-
+import showHistory from './commands/history.js';
 
 const program = new Command();
 
@@ -59,6 +59,13 @@ program
   });
 
 
+program
+  .command("history")
+  .description("View or clear previously executed SQL queries")
+  .option("--clear", "Clear all saved query history")
+  .action((options) => {
+    showHistory(options);
+  });
 
 program
   .command("schema")

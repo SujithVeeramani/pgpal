@@ -1,6 +1,7 @@
 import readline from "readline";
 import getClient from "../db/connect.js";
 import chalk from "chalk";
+import { logQuery } from "../utils/logQuery.js";
 
 async function shellMode() {
   const client = getClient();
@@ -37,6 +38,7 @@ async function shellMode() {
       try {
         const result = await client.query(queryBuffer.trim());
         console.log(chalk.yellow("→ Rows:"), result.rowCount);
+        logQuery(queryBuffer.trim(),"shell")
         console.table(result.rows);
       } catch (err) {
         console.error(chalk.red("❌ Query Error:"), err.message);

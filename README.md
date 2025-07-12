@@ -11,6 +11,8 @@ A powerful command-line interface for PostgreSQL database management, designed t
 - 🗃️ **Data Export**: Dump table data to CSV or JSON formats
 - 💾 **Query Runner**: Execute raw SQL queries with formatted output
 - ⚙️ **Configuration Management**: Easy setup and editing of database connections
+- 🐚 **Multiline Support**:Interactive SQL shell with multiline support
+- 🕓 **Save you Queries**:View or clear query history from CLI
 
 ## 🚀 Installation
 
@@ -92,6 +94,20 @@ Run raw SQL queries with formatted table output:
 pgpal query "SELECT * FROM users WHERE active = true"
 pgpal query "SELECT COUNT(*) FROM orders WHERE created_at > '2023-01-01'"
 ```
+### Multiline SQL queries  
+Open an interactive REPL terminal for quick SQL querying.
+
+```bash
+pgpal shell
+```
+### View your previously excuted Queries
+Save the query exceuted from query command as well as inside the shell
+Also have the option to clear the history as well 
+
+```bash 
+pgpal history            # Show all saved queries
+pgpal history --clear    # Clear the query history
+```
 
 ### Configuration Management
 Edit your database configuration:
@@ -102,24 +118,6 @@ pgpal config edit
 Re-initialize configuration:
 ```bash
 pgpal config init
-```
-
-## 📁 Project Structure
-
-```
-pgpal/
-├── commands/
-│   ├── dump.js          # Data export functionality
-│   ├── editConfig.js    # Configuration editor
-│   ├── initConfig.js    # Configuration initialization
-│   ├── listTable.js     # Table listing
-│   ├── query.js         # SQL query execution
-│   ├── schema.js        # Schema inspection
-│   └── search.js        # Search functionality
-├── db/
-│   └── connect.js       # Database connection handler
-├── index.js             # Main CLI entry point
-└── package.json
 ```
 
 ## 🔐 Security
@@ -217,5 +215,6 @@ If you encounter any issues:
 2. Verify PostgreSQL server is running
 3. Ensure you have proper database permissions
 4. Check the configuration file at `~/.pgpal.env`
+5. Check the history log at `~/.pgpal_history.log`
 
 ---
