@@ -1,4 +1,5 @@
 # 🛠️ PgPal - PostgreSQL CLI Assistant
+[![npm version](https://img.shields.io/npm/v/pgpal.svg?style=flat&color=blue)](https://www.npmjs.com/package/pgpal)
 
 A powerful command-line interface for PostgreSQL database management, designed to make database operations simple and efficient.
 
