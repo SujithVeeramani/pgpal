@@ -10,7 +10,7 @@ import runQuery from './commands/query.js';
 import dumpTable from './commands/dump.js';
 import searchKeyword from './commands/search.js';
 import showSchema from './commands/schema.js';
-
+import shellMode from './commands/shell.js';
 
 
 const program = new Command();
@@ -18,7 +18,7 @@ const program = new Command();
 program
   .name("pgpal")
   .description("🛠️ PgPal – PostgreSQL CLI Assistant")
-  .version("1.0.0");
+  .version("1.0.2");
 
 program
   .command("list")
@@ -75,6 +75,12 @@ program
     showSchema(target, options);
   });
 
+program
+  .command("shell")
+  .description("Interactive SQL shell (REPL mode)")
+  .action(() => {
+    shellMode();
+  });
 
 const config = new Command("config").description("Manage PgPal DB configuration");
 
